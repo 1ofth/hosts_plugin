@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>ru.ifmo.s243875.tasks.plugin.hosts_plugin</id>
+    <name>Hosts_plugin</name>
+    <vendor email="edem.ibraimov.2000@mail.ru">Edem</vendor>
+
+    <description><![CDATA[
+    Simple plugin that supports<br>
+    syntax and error highlighting<br>
+    /etc/hosts file.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType name="Linux hosts file" implementationClass="ru.ifmo.s243875.tasks.plugin.HostsFileType"
+                  fieldName="INSTANCE" language="Hosts" extensions="hosts"/>
+        <fileTypeFactory implementation="ru.ifmo.s243875.tasks.plugin.HostsFileTypeFactory"/>
+        <lang.parserDefinition language="Hosts"
+                               implementationClass="ru.ifmo.s243875.tasks.plugin.HostsParserDefinition"/>
+        <lang.syntaxHighlighterFactory language="Hosts"
+                                       implementationClass="ru.ifmo.s243875.tasks.plugin.HostsSyntaxHighlighterFactory"/>
+    </extensions>
+    <actions>
+
+    </actions>
+</idea-plugin>

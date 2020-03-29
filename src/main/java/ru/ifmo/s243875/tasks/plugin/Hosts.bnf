@@ -1,0 +1,22 @@
+{
+  parserClass="ru.ifmo.s243875.tasks.plugin.parser.HostsParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Hosts"
+  psiImplClassSuffix="Impl"
+  psiPackage="ru.ifmo.s243875.tasks.plugin.psi"
+  psiImplPackage="ru.ifmo.s243875.tasks.plugin.psi.impl"
+
+  elementTypeHolderClass="ru.ifmo.s243875.tasks.plugin.psi.HostsTypes"
+  elementTypeClass="ru.ifmo.s243875.tasks.plugin.psi.HostsElementType"
+  tokenTypeClass="ru.ifmo.s243875.tasks.plugin.psi.HostsTokenType"
+
+  psiImplUtilClass="ru.ifmo.s243875.tasks.plugin.psi.impl.HostsPsiImplUtil"
+}
+
+hostsFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property ::= (IP VALUE+)
