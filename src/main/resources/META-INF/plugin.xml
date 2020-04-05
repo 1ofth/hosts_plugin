@@ -19,6 +19,7 @@
                                implementationClass="ru.ifmo.s243875.tasks.plugin.HostsParserDefinition"/>
         <lang.syntaxHighlighterFactory language="Hosts"
                                        implementationClass="ru.ifmo.s243875.tasks.plugin.HostsSyntaxHighlighterFactory"/>
+        <colorSettingsPage implementation="ru.ifmo.s243875.tasks.plugin.HostsColorSettingsPage"/>
     </extensions>
     <actions>
 
